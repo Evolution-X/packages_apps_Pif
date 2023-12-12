@@ -6,6 +6,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:settings="http://schemas.android.com/apk/res/com.goolag.pif">
 
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="device_intro"/>
+
     <!-- Start of spoofed values category -->
     <PreferenceCategory  
         android:key="category_spoofed_values"

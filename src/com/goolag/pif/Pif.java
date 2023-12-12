@@ -6,6 +6,7 @@
 package com.goolag.pif;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 
@@ -14,11 +15,14 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
 import com.android.internal.util.evolution.PixelPropsUtils;
+import com.android.settingslib.widget.TopIntroPreference;
 
 import com.goolag.pif.R;
 
 public class Pif extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
+
+    private TopIntroPreference mIntroPreference;
 
     private Preference mProductPreference;
     private Preference mDevicePreference;
@@ -43,6 +47,8 @@ public class Pif extends PreferenceFragment
 
         String[] selectedDeviceProps = getResources().getStringArray(selectedArrayResId);
 
+        mIntroPreference = findPreference("device_intro");
+
         mProductPreference = findPreference("product");
         mDevicePreference = findPreference("device");
         mManufacturerPreference = findPreference("manufacturer");
@@ -54,6 +60,8 @@ public class Pif extends PreferenceFragment
         mIDPreference = findPreference("id");
         mTypePreference = findPreference("type");
         mTAGSPreference = findPreference("tags");
+
+        mIntroPreference.setTitle(Build.MANUFACTURER + " " + Build.MODEL);
 
         mProductPreference.setSummary(selectedDeviceProps[0]);
         mDevicePreference.setSummary(selectedDeviceProps[1].isEmpty() ?
