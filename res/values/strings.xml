@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-2024 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string name="app_name">Pif</string>
+    <string name="pif_title">Play integrity fix</string>
+    <string name="manufacturer_title">Manufacturer</string>
+    <string name="model_title">Model</string>
+    <string name="fingerprint_title">Fingerprint</string>
+    <string name="brand_title">Brand</string>
+    <string name="product_title">Product</string>
+    <string name="device_title">Device</string>
+    <string name="release_title">Release</string>
+    <string name="id_title">ID</string>
+    <string name="incremental_title">Incremental</string>
+    <string name="type_title">Type</string>
+    <string name="tags_title">Tags</string>
+    <string name="security_patch_title">Security patch</string>
+    <string name="device_initial_sdk_int_title">Shipping API level</string>
+
+</resources>
